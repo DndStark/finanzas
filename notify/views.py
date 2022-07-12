@@ -31,4 +31,4 @@ def send_notification(registration_tokens , message_title , message_body, dataOb
 def send(request):
     resgistration  = ['drdl4JErS7uIJkyVEN0Lmh:APA91bHnIDGlzi1WSW4lQzJB_iNo0wIbzNkOsE8QbrBuCsrzxat7OsdRe29tNTj5sQdlb0kywMQv-K-AZUD5hUgin3zBfUU2IRlYbYL-Ut05HgDHMYroz3_ua_-V3tH2XV6b_rhMesK6']
     send_notification(resgistration, request.GET["messaget"], request.GET["messageb"],)
-    return HttpResponse("index.html")
+    return HttpResponse("Successfully sent message")
