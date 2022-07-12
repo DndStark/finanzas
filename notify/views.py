@@ -10,7 +10,7 @@ firebase_admin.initialize_app(cred)
 
 def index(request):
     resgistration  = ['drdl4JErS7uIJkyVEN0Lmh:APA91bHnIDGlzi1WSW4lQzJB_iNo0wIbzNkOsE8QbrBuCsrzxat7OsdRe29tNTj5sQdlb0kywMQv-K-AZUD5hUgin3zBfUU2IRlYbYL-Ut05HgDHMYroz3_ua_-V3tH2XV6b_rhMesK6']
-    message = send_notification(resgistration , 'Test tittle' , 'Hola, solo estamos haciendo pruebas de notificación',)
+    #message = send_notification(resgistration , 'Test tittle' , 'Hola, solo estamos haciendo pruebas de notificación',)
     return render(request, 'index.html', {'message' : message})
 
 def send_notification(registration_tokens , message_title , message_body, dataObject = None):
@@ -26,3 +26,8 @@ def send_notification(registration_tokens , message_title , message_body, dataOb
     response = messaging.send_multicast(message)
 
     return "Successfully sent message " + str(response)
+
+
+def send(request):
+    resgistration  = ['drdl4JErS7uIJkyVEN0Lmh:APA91bHnIDGlzi1WSW4lQzJB_iNo0wIbzNkOsE8QbrBuCsrzxat7OsdRe29tNTj5sQdlb0kywMQv-K-AZUD5hUgin3zBfUU2IRlYbYL-Ut05HgDHMYroz3_ua_-V3tH2XV6b_rhMesK6']
+    send_notification(resgistration, request.GET["messaget"], request.GET["messageb"],)
