@@ -11,7 +11,7 @@ firebase_admin.initialize_app(cred)
 def index(request):
     resgistration  = ['drdl4JErS7uIJkyVEN0Lmh:APA91bHnIDGlzi1WSW4lQzJB_iNo0wIbzNkOsE8QbrBuCsrzxat7OsdRe29tNTj5sQdlb0kywMQv-K-AZUD5hUgin3zBfUU2IRlYbYL-Ut05HgDHMYroz3_ua_-V3tH2XV6b_rhMesK6']
     #message = send_notification(resgistration , 'Test tittle' , 'Hola, solo estamos haciendo pruebas de notificación',)
-    return render(request, 'index.html', {'message' : message})
+    return render(request, 'index.html', {'message' : "Sending Message"})
 
 def send_notification(registration_tokens , message_title , message_body, dataObject = None):
     message = messaging.MulticastMessage(
